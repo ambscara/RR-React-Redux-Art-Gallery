@@ -40,6 +40,8 @@ function App(props) {
 }
 
 
-const mapStateToProps = (state, ownProps) => ({ objectId: state.data.objectId })
+//curried or applyed 
+const mapStateToProps = (state, ownProps) => ({
+   objectId: state.data.objectId })
 
 export default connect(mapStateToProps)(App);

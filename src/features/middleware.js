@@ -3,10 +3,14 @@ export const logger = store => next => action => {
         action(store.dispatch, store.getState)
     } else { 
         console.log('dispatch', store.getState())
+        //let the action trigger
         next(action)
+        
         console.log('after dispatch', store.getState())
     }
 }
+
+
 
 // export const logger = store => next => action => {
 //     console.log('dispatch', store.getState())
